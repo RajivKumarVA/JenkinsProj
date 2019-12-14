@@ -1,7 +1,7 @@
 pipeline {
   agent {
     label 'Slave2-deploy'
-    }
+  }
   
   stages {
     stage ('Git Checkout') {
