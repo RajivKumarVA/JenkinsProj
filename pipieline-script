@@ -1,16 +1,21 @@
 pipeline {
-  agent any
+  agent {
+    label 'Slave2-deploy'
+    }
   
   stages {
-    stage ('Test Stage') {
+    stage ('Git Checkout') {
       steps {
-        echo "Test Mode"
+        echo "Checkout from Git"
+        git clone 'https://github.com/RajivKumarVA/JenkinsProj.git'
       }
     }
-    
-    stage ('Deploy Stage') {
+ 
+    stage ('Deploy') {
       steps {
-        echo "Deploy Stage"
+        echo "Deploying web page"
+        sudo chmod 777 deployWeb.sh
+        ./deployWeb.sh
       }
     }
   }
