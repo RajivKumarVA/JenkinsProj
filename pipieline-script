@@ -14,7 +14,7 @@ pipeline {
     stage ('Deploy Stage') {
       steps {
         echo "Deploy Stage"
-        sh 
+        sh deployWeb.sh
       }
     }
   }
