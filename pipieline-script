@@ -14,7 +14,7 @@ pipeline {
     stage ('Deploy Stage') {
       steps {
         echo "Deploy Stage"
-        sh label: '', script: 'deployWeb.sh'
+        sh label: '', script: '/home/ubuntu/workspace/Pipeline-Lab-Project/deployWeb.sh'
       }
     }
   }
