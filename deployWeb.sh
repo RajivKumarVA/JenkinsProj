@@ -4,6 +4,6 @@ then
     sudo rm /var/www/html/index1.html
     sudo cp JenkinsProj/index2.html /var/www/html/
 else
-    echo "Error occurred in deploying"
+    echo "Error occurred in deploying" >> /tmp/log.txt
     exit 1
 fi
