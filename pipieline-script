@@ -14,8 +14,7 @@ pipeline {
     stage ('Deploy Stage') {
       steps {
         echo "Deploy Stage"
-        chmod 777 deployWeb.sh
-        sh deployWeb.sh
+        sh label: '', script: 'deployWeb.sh'
       }
     }
   }
