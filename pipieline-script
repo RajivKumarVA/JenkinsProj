@@ -1,20 +1,19 @@
-pipeline {
 
+pipeline {
+  agent any
   
   stages {
-    stage ('Git Checkout') {
+    stage ('Test Stage') {
       steps {
-        echo "Checkout from Git"
-  //      git clone 'https://github.com/RajivKumarVA/JenkinsProj.git'
+        echo "Test Mode"
       }
     }
- 
-    stage ('Deploy') {
+    
+    stage ('Deploy Stage') {
       steps {
-//        echo "Deploying web page"
-//        sudo chmod 777 deployWeb.sh
-//        sh /home/ubuntu/deployWeb.sh
+        echo "Deploy Stage"
       }
     }
   }
 }
+     
