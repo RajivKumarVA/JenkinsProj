@@ -15,7 +15,7 @@ pipeline {
       steps {
 //        echo "Deploying web page"
 //        sudo chmod 777 deployWeb.sh
-        sh /home/ubuntu/deployWeb.sh
+//        sh /home/ubuntu/deployWeb.sh
       }
     }
   }
